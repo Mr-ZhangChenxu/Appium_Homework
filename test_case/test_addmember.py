@@ -23,7 +23,7 @@ class TestAddmember():
     def test_addmember(self):
         '''
         1、添加成员
-        2、 检验添加成功后的toast
+        2、检验添加成功后的toast
         :return:
         '''
 
@@ -36,7 +36,8 @@ class TestAddmember():
         phone_num = f'136{num}'
 
         # 添加成员
-        add_result = self.app.goto_main_page().goto_members_page().goto_addmember_page().addmember(username, phone_num)
+        add_result = self.app.goto_main_page().goto_members_page().\
+            goto_addmember_page().addmember(username, phone_num)
 
         # 校验是否添加成功
         assert add_result == '添加成功'
